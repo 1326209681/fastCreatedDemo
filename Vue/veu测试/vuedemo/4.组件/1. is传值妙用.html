@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>is传值妙用</title>
+   <script src="vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!--示例一：-->
+        <table>
+            <tbody>
+            <!--
+            在H5中table标签下面必须有tbody-> tr->td结构
+            直接使用组件：<row></row>在下面的话，不会被<tbody>所包裹，而是暴露在他外面了，需要注意!
+        我们可以使用is 来进行绑定；
+        还有:
+        1. <ol><li>
+            2. <ul><li>
+            3. <select><option>
+            > 在使用这些的时候，还是按照层级写，组件使用is进行绑定，而不是直接将组件替换成li,option等标签
+
+
+            -->
+            <tr is="row">
+            <tr is="row">
+            <tr is="row">
+            </tr>
+        </tbody>
+        </table>
+        <!--示例二：-->
+        <div id="root">
+            <table>
+                <select>
+                    <option is="row"></option>
+                </select>
+            </table>
+        </div>
+    </div>
+<script>
+    Vue.component('row',{
+        template:'<tr><td>this is a row</td></tr></td>'
+    });
+    var vm=new Vue({
+        el:"#app"
+    })
+</script>
+</body>
+</html>

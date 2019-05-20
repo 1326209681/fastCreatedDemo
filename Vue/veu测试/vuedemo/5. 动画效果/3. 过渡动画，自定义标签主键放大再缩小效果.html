@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>快速开始</title>
+    <script src="vue.js"></script>
+
+</head>
+<body>
+<div id="app">
+    <transition
+            enter-active-class="active"
+            leave-active-class="leave"
+    >
+        <div v-if="show"> hello,world</div>
+    </transition>
+    <button @click="handleClick">切换</button>
+
+</div>
+<script>
+    /**
+     * 这里是给了命名值  name=fade，所以只有这个标签下的才有效果，
+     * 如果希望别的transition也有效果的话，则不命名，
+     * 将.fade-enter-active改为 .v-enter-active   以及下面的也这样修改即可
+     * @type {Vue}
+     */
+    var vm=new Vue({
+        el: '#app',
+        data: {
+            show: true
+        },
+        methods: {
+            handleClick: function () {
+                this.show=!this.show;
+            }
+        }
+    })
+
+</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>使用监听实现计算属性</title>
+    <script src="../vue.js"></script>
+</head>
+
+<body>
+<div id="app">
+    {{fullName}}
+</div>
+<script>
+
+
+    /*
+    * 使用监听机制，我们可以手动测试： 在浏览器F12 ,Console控制台输入：
+    * vm.lastName = "World"
+    * 输入后显示的值就会被监听到，从而改为fullName
+    * 使用监听机制会导致代码量增加，虽然也有缓存机制，但是使用计算属性更好；
+    * */
+    var vm=new Vue({
+        el:"#app",
+        data:{
+            firstName:"Hello",
+            lastName:"Mike",
+            fullName: "Hello Mike"
+        },
+        watch:{
+            firstName: function () {
+                this.fullName= this.firstName+" "+this.lastName;
+            },
+            lastName:function () {
+                this.fullName=this.firstName+" " +this.lastName;
+            }
+        }
+    })
+
+</script>
+</body>
+</html>

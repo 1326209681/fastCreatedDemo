@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>计算属性的get和set方法</title>
+    <script src="../vue.js"></script>
+</head>
+<body>
+<div id="app">
+    {{fullName}}
+</div>
+<script>
+    /*
+    * 这里是将fullName看成一个对象，当插值表达式获取这个对象的值的时候，就会找它的Get方法；
+    * 而Set方法则是给这个对象赋值，比如在浏览器中打开此文件并F12在Console中输入：vm.fullName="Hello World"
+    * 执行流程：
+    *   1. set方法传入Value:   Hello World
+    *   2. 执行value.split 方法，将数据分隔为数组：   arr=[Hello,World]
+    *   3. 将值赋值给firstName,lastName
+    *   4. 当对get中调用的变量：firstName,lastName  发生改变的时候，会重新加载数据
+    *   5. 页面显示： Hello World
+    *
+    *
+    *
+    * */
+    var vm=new Vue({
+        el:"#app",
+        data:{
+            firstName: "Dell",
+            lastName:"Lee"
+        },
+        computed:{
+            fullName:{
+                get: function () {
+                    return this.firstName+" "+ this.lastName
+                },
+                set:function (value) {
+                    var arr=value.split(" ");
+                    this.firstName=arr[0];
+                    this.lastName=arr[1];
+                }
+            }
+        }
+
+    })
+</script>
+</body>
+</html>

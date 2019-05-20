@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>v-if与v-show</title>
+		<script src="js/vuejs-2.5.16.js"></script>
+	</head>
+	<!--
+
+v-if和v-show都是用来控制元素的渲染。
+v-if判断是否加载，可以减轻服务器的压力，在需要时加载,但有更高的切换开销;v-show调整DOM元素的CSS的dispaly属性，可以使客户端操作更加流畅，但有更高的初始渲染开销。
+如果需要非常频繁地切换，则使用 v-show 较好；如果在运行时条件很少改变，则使用 v-if 较好。
+
+-->
+	<body>
+		<div id="app">
+			<span v-if="flag">传智播客</span>
+			<span v-show="flag">itcast</span>
+			<button @click="toggle">切换</button>		<!--点击这个触发下面的切换事件-->
+		</div>
+	</body>
+	<script>
+		//view model
+		new Vue({
+			el:"#app",
+			data:{
+			    flag:false
+			},
+			methods:{
+			    toggle:function () {
+                    this.flag = !this.flag;			//将值进行切换，flag初始为false;点击后取反
+                }
+			}
+		})
+	</script>
+</html>
+
+
+
+

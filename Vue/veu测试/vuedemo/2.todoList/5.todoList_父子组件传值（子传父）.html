@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TodoList</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+<div id="root">
+    <div>
+        <input type="text" v-model="todoValue"/>
+        <button @click="handleBtnClick">提交</button>
+    </div>
+    <ul>
+        <!--3. 使用组件-->
+
+        <!--组件名字是大写，这里标签可以小写，小写item前面加一个横杠隔开-->
+        <todo-item :content="item"
+                   :index="index"
+                   v-for="(item, index) in list"
+                   @delete="deleteItemFromList(index)">
+        </todo-item>
+
+    </ul>
+</div>
+
+<script>
+    /*
+    * -- 局部组件使用方式
+    *      1. 首先声明一个组件对象
+    *      2. 注册到管理下面的components目录内
+    *      3. 使用
+    *
+    * */
+    //1. 组件声明对象
+    var TodoItem = {
+        props: ['content','index'],
+        template: "<li @click='deleteFormTodoItem(index)'>{{content}}</li>",
+        methods:{
+            deleteFormTodoItem:function (index) {
+                this.$emit("delete",index)
+            }
+        }
+    };
+    var app = new Vue({
+        el: '#root',
+        //2. 注册组件
+        components: {
+            TodoItem: TodoItem
+        },
+        data: {
+            todoValue: '',
+            list: []
+        },
+        methods: {
+            handleBtnClick: function () {
+                this.list.push(this.todoValue);
+                this.todoValue = ''
+            },
+            deleteItemFromList:function (index) {
+                this.list.splice(index,1)
+            }
+        }
+    })
+</script>
+
+</body>
+</html>
+<!--
+传值的时候，注意几个步骤：
+    1. 声明组件对象
+    2. 注册组件
+    3. 使用组件
+    4. 在触发事件的时候，数据应该进行传值
+    5. 传值的时候应该将该数据列入通道
+    6. 在父组件应该设置监听
+  // 发出通知： this.$emit
+  // 监听事件： @...
+  //具体百度...
+
+
+
+-->

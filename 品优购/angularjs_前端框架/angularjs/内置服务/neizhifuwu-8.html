@@ -1,0 +1,39 @@
+<html>
+<head>
+    <title> angularJS入门小程序小DEMO-8 内置服务</title>
+    <script src="angular.min.js"></script>
+    <script>
+        <!--建立模块 -->
+        var app=angular.module("myApp",[]);
+        <!--创建控制器  $scope就是控制层与视图层之间交换数据的桥梁-->
+        app.controller("myController",function($scope,$http){
+          $scope.findList=function () {
+              $http.get("data.json").success(
+                  function (response) {
+                      $scope.list=response;
+                  });}
+          /*
+          * $scope.findList();
+          * 这里也可以使用此方法
+			* 内置服务是配合tomcat使用，所以必须在tomcat服务中运行测试
+          * */
+        });
+    </script>
+</head>
+<body ng-app="myApp" ng-controller="myController" ng-init="findList()">
+<table>
+    <tr>
+        <td>姓名</td>
+        <td>数学</td>
+        <td>语文</td>
+    </tr>
+    <tr ng-repeat="entity in list">
+        <td>{{entity.name}}</td>
+        <td>{{entity.shuxue}}</td>
+        <td>{{entity.yuwen}}</td>
+    </tr>
+</table>
+</body>
+</html>
+
+

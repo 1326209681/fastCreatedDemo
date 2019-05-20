@@ -1,0 +1,43 @@
+.booksImg{
+    /*行高等于高度,垂直居中*/
+    line-height: 1500px;
+    /*水平居中*/
+    text-align: center;
+
+}
+.sum-btn {
+    display: block;
+    position: relative;
+    width: 96px;
+    height: 52px;
+    line-height: 52px;
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+    background: #e54346;
+    overflow: hidden
+}
+
+.search .btn-danger {
+    font-size: 16px
+}
+
+
+
+
+.sumbtn {
+    float: right
+}
+
+a.sum-btn {
+    display: block;
+    position: relative;
+    width: 96px;
+    height: 52px;
+    line-height: 52px;
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+    background: #e54346;
+    overflow: hidden
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/com-jpa-demo.iml" filepath="$PROJECT_DIR$/com-jpa-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jpa-day1/jpa-day1.iml" filepath="$PROJECT_DIR$/jpa-day1/jpa-day1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jpa-day2/jpa-day2.iml" filepath="$PROJECT_DIR$/jpa-day2/jpa-day2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jpa-day3-many-to-many/jpa-day3-many-to-many.iml" filepath="$PROJECT_DIR$/jpa-day3-many-to-many/jpa-day3-many-to-many.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jpa-day3-one-to-many/jpa-day3-one-to-many.iml" filepath="$PROJECT_DIR$/jpa-day3-one-to-many/jpa-day3-one-to-many.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jpa-day3-spec/jpa-day3-spec.iml" filepath="$PROJECT_DIR$/jpa-day3-spec/jpa-day3-spec.iml" />
+    </modules>
+  </component>
+</project>

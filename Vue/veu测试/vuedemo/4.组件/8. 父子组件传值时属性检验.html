@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>8. 父子组件传值时属性检验.html</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <child :content="123"></child>
+    <!--
+    对应数组类型：
+      <child :content="{1:a}"></child>
+    -->
+</div>
+<script>
+    Vue.component('child',{
+        props: {
+         //   content: Number    这里是检验数字 /*这里限制为Number类型，也可以指定为String等*/
+            //    content: String       这里是检验字符串
+            //  content: [Number,String]        这里是检验数组
+            content:{
+                type: String,       //字符串类型
+                required: true,      //必须传这个content
+                default: 'default value',    //当不传值的时候，content的默认值为default value   这里面的这个值可以随意变换
+                validator: function (value) {
+                    return (value.length>5)         //自定义校验器，长度必须大于5
+                }
+            }
+            },
+        template: '<div>{{content}}</div>'
+
+    })
+
+</script>
+</body>
+</html>
+
+
+<!--
+:content="123"  则绑定的content为123的Number类型
+content="123"   则绑定的content 为123的String 类型
+-->

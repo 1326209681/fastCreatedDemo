@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>7. 父子组件传值，emit带参数.html</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <counter :count="3" @inc="handleIncrease"></counter>
+    <counter :count="2"  @inc="handleIncrease"></counter>
+    <div>{{total}}</div>
+</div>
+<script>
+    var counter = {
+        props: ['count'],
+        data: function () {
+            return {
+                number: this.count
+            }
+        },
+        template: '<div @click="handleClick">{{number}}</div>',
+        methods: {
+            handleClick: function () {
+                this.number=this.number +2 ;
+                this.$emit('inc',2)
+            }
+        }
+    };
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            total: 5
+        },
+        components: {
+            counter: counter
+        },
+        methods: {
+            handleIncrease: function (step) {
+              this.total+=step
+          }
+        }
+    })
+</script>
+</body>
+</html>
+
+<!--
+这里传值，是子组件给父组件传值；
+    1. 子组件为"inc"，2   进行绑定事件，并携带参数
+    2. 父组件@inc 接收参数并触发方法 handleIncrease  ，这个参数接收到了step
+    3. 当父组件接收到子组件传入的参数的时候，将本身携带的total+参数
+    4. 每次子组件触发方法的时候就会触发事件，而父组件监听事件并接收到值的时候就会直接触发增加方法。
+-->
+
+

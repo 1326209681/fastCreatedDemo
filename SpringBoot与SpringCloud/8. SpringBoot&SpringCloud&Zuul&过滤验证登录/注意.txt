@@ -1,0 +1,2 @@
+1. 此项目是将SpringBoot+SpringCloud+过滤器验证登录的完整版本；
+2. 过滤器只实现了最基本的验证token功能；

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v-for循环打印对象</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <!--
+    这里的key值就是对象中的键名,index就是索引与数组的index一样
+    注意： 当操作对象的时候也是一样，
+    如果在使用过程中需要对对象进行增加或者删除操作，
+    就直接更改引用即可，将此对象引用到一个新的值上面；
+
+    举个例子：
+        此代码中如果再增加一个key-value，则不能使用vm.User.Address="四川"   这样是不能增加地址的；
+    而是：
+        方法一：
+        vm.User={
+                  name: "zhangsan",
+                age:28,
+                school:"SiChuanUniversity",
+                Address="四川"
+                }
+        重新引用一个新的，这样就能在浏览器中显示了！
+       方法二：
+       Vue.set(vm.User,"Address","四川")
+       //Vue.set不仅是一个全局方法，也是一个实例方法，也可以这样做：
+       方法三：
+       Vue.$set(vm.User,"Address","四川")
+
+
+       //Vue.set方法还有一个作用，就是改变索引处的值
+            比如：
+                 vm.$set(vm.User,1,"18");
+            或者：
+                 vm.set(vm.User,1,"18");
+       分析：这里面1 表示index为1的值，当进行遍历的时候，User对象中age的index为1，使用此方式，就可以将age=28改为18
+
+    -->
+    <div v-for="(item,key,index) of User">
+        {{item}}---------{{key}}------{{index}}
+    </div>
+</div>
+<script>
+    var vm=new Vue({
+        el: "#app",
+        data:{
+            User:{
+                name: "zhangsan",
+                age:28,
+                school:"SiChuanUniversity"
+            }
+        }
+    })
+</script>
+</body>
+</html>

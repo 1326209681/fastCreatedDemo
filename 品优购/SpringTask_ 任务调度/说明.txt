@@ -1,0 +1,7 @@
+这是一个最基础的入门demo，分为pom.xml,applicationContext-task.xml,web.xml，以及运行代码SeckillTask.java
+
+
+* 使用tomcat 运行，运行后自动执行
+* 如果需要其他，则可以进行添加表达式等，详细的请看相关文档；
+* 这仅仅是一个简单的运行文档
+* 表达式很简单，网上有表达式生成文档；

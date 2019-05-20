@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>使用style绑定样式</title>
+    <script src="../vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <!--1.这里使用单一样式-->
+    <div :style="styObj" @click="handleDivClick">
+        HelloWorld
+    </div>
+
+    <!--2.这里使用数组，即还可以放其他的样式[改进版]-->
+    <div :style="[styObj,{fontSize: '20px'}]" @click="handleDivClick">
+        HelloWorld
+    </div>
+</div>
+<script>
+    var vm=new Vue({
+        el:"#app",
+        data:{
+            styObj:{
+                    color: "red"
+            }
+        },
+        methods:{
+            handleDivClick:function () {
+                this.styObj.color= this.styObj.color==="red"?"black":"red"
+            }
+        }
+    })
+</script>
+</body>
+</html>

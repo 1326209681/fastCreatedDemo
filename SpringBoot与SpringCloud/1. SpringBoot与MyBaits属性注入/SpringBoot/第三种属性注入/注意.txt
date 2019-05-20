@@ -1,0 +1,4 @@
+1. 这里的属性注入是使用application.properties配置具体信息
+2. 配置实体类JdbcProperties
+3. 然后使用JdbcConfig类： 添加@Bean注解被管理，然后添加@ConfigurationProperties注解扫描
+4. 在扫描中添加前缀jdbc筛选，方法中调用DataSource时，会进行扫描并且会自动装配进去；

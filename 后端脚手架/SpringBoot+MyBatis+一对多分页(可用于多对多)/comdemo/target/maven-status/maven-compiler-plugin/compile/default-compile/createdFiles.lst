@@ -1,0 +1,6 @@
+com\demo\service\DemoService.class
+com\demo\entity\Teachplan.class
+Application.class
+com\demo\mapper\DemoMapper.class
+com\demo\service\impl\DemoServiceImpl.class
+com\demo\controller\DemoController.class

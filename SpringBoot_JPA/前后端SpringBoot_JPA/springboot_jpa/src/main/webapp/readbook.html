@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="plugins/jQuery/jquery-2.2.3.min.js"></script>
+    <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="plugins/angularjs/angular.min.js"> </script>
+
+    <!--分页组件-->
+    <script src="plugins/angularjs/pagination.js"></script>
+    <link rel="stylesheet" href="plugins/angularjs/pagination.css">
+    <!--分页组件-->
+
+    <script src="js/base_pagination.js"></script>
+
+    <script src="js/base.js"></script>
+    <script type="text/javascript" src="js/service/service.js"> </script>
+    <script type="text/javascript" src="js/controller/controller.js"> </script>
+
+
+<body background="img/背景.jpg"
+      style=" background-repeat:no-repeat;
+        background-size:100% 100%;
+        background-attachment: fixed;"  ng-app="yuanchunyuyi" ng-controller="controller" ng-init="findBookById()">
+
+    <tr ng-repeat="entity in list">
+        <td>{{entity.bookname}}</td>
+        <td>{{entity.bookprice}}</td>
+    </tr>
+
+</body>
+</html>

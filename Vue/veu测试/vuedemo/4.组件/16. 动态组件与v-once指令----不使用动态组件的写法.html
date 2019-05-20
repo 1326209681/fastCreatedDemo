@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>16. 动态组件与v-once指令----不使用动态组件的写法.html</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <child-one v-if="type==='child-one'"></child-one>
+    <child-two v-if="type==='child-two'"></child-two>
+    <button @click="handleBtnClick">点我更换组件</button>
+</div>
+<script>
+    /**
+     * 普通动态组件展示原理：
+     *      1. 通过 v-if标签 然后从type中取值
+     *      2. button按钮则进行type的值的切换，通过点击事件后切换type的值，而if条件中则根据值的不同而动态展示组件。
+     *      3. 这样就完成了点击事件动态展示两个组件的效果了；
+     */
+    Vue.component('child-one',{
+        template: '<div>child-one</div>'
+    });
+
+    Vue.component('child-two',{
+        template: '<div>child-two</div>'
+    });
+    var vm=new Vue({
+        el: '#app',
+        data: {
+          type: 'child-one'
+        },
+        methods: {
+           handleBtnClick: function() {
+                this.type= this.type==='child-one'? 'child-two': 'child-one';
+           }
+        }
+
+    })
+
+</script>
+</body>
+</html>

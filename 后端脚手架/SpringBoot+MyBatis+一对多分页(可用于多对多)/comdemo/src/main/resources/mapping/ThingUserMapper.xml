@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.demo.mapper.ThingUser">
+
+<resultMap id="BaseResultMap" type="com.demo.entity.ThingUser">
+    <id property="thingId" column="thing_id" jdbcType="VARCHAR"></id>
+    <result property="thing" column="thing" jdbcType="VARCHAR"></result>
+</resultMap>
+
+    <select id="findAll" resultMap="BaseResultMap" >
+        SELECT thing_id, thing
+        from thing_user t1
+        WHERE
+        t1.parent_id=#{id, jdbcType=VARCHAR}
+    </select>
+
+</mapper>

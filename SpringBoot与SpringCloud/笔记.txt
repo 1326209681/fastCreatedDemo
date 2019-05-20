@@ -1,0 +1,6 @@
+1. euraka自己既是一个注册中心又是一个服务中心
+2. 如果没有人注册，它就会报错，它可以自己给自己注册，所以在开始时应该配置一个默认的注册地址
+这样它就可以给自己注册了；
+3. 在服务端上的Application启动类上，使用注解：@EnableDiscoveryClient，它即可以标识SpringCloud的Eureka
+也可以标记Zookeeper等注册中心，做到了复用；   
+4. 使用@EnableEurekaClient 也可以标记Eureka的服务端，但是它只能用于Eureka.

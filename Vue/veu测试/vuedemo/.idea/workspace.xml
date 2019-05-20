@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="647b5902-bd4c-4486-9cc2-c85b31c37a1f" name="Default Changelist" comment="" />
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/4.组件/16. 动态组件与v-once指令----不使用动态组件的写法.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="201">
+              <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/4.组件/17. 动态组件.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="960">
+              <caret line="40" column="9" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Start.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/4.组件/14. 具名插槽.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="624">
+              <caret line="26" column="7" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/todoList/todoList.html" />
+        <option value="$PROJECT_DIR$/todoList/todoList_容易版本.html" />
+        <option value="$PROJECT_DIR$/todoList/todoList_全局组件改造.html" />
+        <option value="$PROJECT_DIR$/todoList/todoList_局部组件改造.html" />
+        <option value="$PROJECT_DIR$/todoList/todoList_父子组件传值（子传父）.html" />
+        <option value="$PROJECT_DIR$/todoList/5.todoList_父子组件传值（子传父）.html" />
+        <option value="$PROJECT_DIR$/Vue基础/Vue实例生命周期函数.html" />
+        <option value="$PROJECT_DIR$/Vue基础/计算属性.html" />
+        <option value="$PROJECT_DIR$/Vue基础/使用方法实现计算属性.html" />
+        <option value="$PROJECT_DIR$/Vue基础/计算属性的实现方式（优势computed大于监听大于方法）/使用方法实现计算属性.html" />
+        <option value="$PROJECT_DIR$/Vue基础/计算属性的实现方式（优势computed大于监听大于方法）/使用监听实现计算属性.html" />
+        <option value="$PROJECT_DIR$/Vue基础/demo.html" />
+        <option value="$PROJECT_DIR$/Vue基础/计算属性的实现方式（优势computed大于监听大于方法）/计算属性的get和set方法.html" />
+        <option value="$PROJECT_DIR$/Vue基础/样式绑定/使用class与对象的flag进行绑定数据.html" />
+        <option value="$PROJECT_DIR$/Vue基础/2.样式绑定/1. 使用class与对象的flag进行绑定数据.html" />
+        <option value="$PROJECT_DIR$/Vue基础/2.样式绑定/2. 使用三元运算符加绑定class属性绑定样式.html" />
+        <option value="$PROJECT_DIR$/Vue基础/2.样式绑定/3. 使用style绑定样式.html" />
+        <option value="$PROJECT_DIR$/Vue基础/3.Vue中的条件渲染/1. Vue中的条件渲染.html" />
+        <option value="$PROJECT_DIR$/Vue基础/3.Vue中的条件渲染/2. 条件渲染多重判断.html" />
+        <option value="$PROJECT_DIR$/Vue基础/3.Vue中的条件渲染/3. 条件渲染中注意的细节.html" />
+        <option value="$PROJECT_DIR$/Vue基础/v-for循环打印对象.html" />
+        <option value="$PROJECT_DIR$/5.组件/is传值妙用.html" />
+        <option value="$PROJECT_DIR$/5.组件/子组件的data.html" />
+        <option value="$PROJECT_DIR$/5.组件/1. is传值妙用.html" />
+        <option value="$PROJECT_DIR$/5.组件/2.子组件的data.html" />
+        <option value="$PROJECT_DIR$/5.组件/3. ref的简单使用.html" />
+        <option value="$PROJECT_DIR$/5.组件/4. ref对组件的操作（1）.html" />
+        <option value="$PROJECT_DIR$/5.组件/5. 订阅监听父子组件传值.html" />
+        <option value="$PROJECT_DIR$/4.组件/6. 父组件对子组件传值.html" />
+        <option value="$PROJECT_DIR$/4.组件/6. 父组件对子组件的传值.html" />
+        <option value="$PROJECT_DIR$/4.组件/6. 父组件传值给子组件.html" />
+        <option value="$PROJECT_DIR$/4.组件/7. 父子组件传值，emit带参数.html" />
+        <option value="$PROJECT_DIR$/4.组件/8. 父子组件传值时属性检验.html" />
+        <option value="$PROJECT_DIR$/4.组件/9. 父子组件非props特性.html" />
+        <option value="$PROJECT_DIR$/4.组件/10. 给组件绑定原生事件.html" />
+        <option value="$PROJECT_DIR$/4.组件/10. 给组件绑定原生事件1.html" />
+        <option value="$PROJECT_DIR$/4.组件/11. 给组件绑定原生事件的快捷方式.html" />
+        <option value="$PROJECT_DIR$/4.组件/12. 非父子组件之间传值.html" />
+        <option value="$PROJECT_DIR$/4.组件/13. 在Vue中使用插槽.html" />
+        <option value="$PROJECT_DIR$/4.组件/16. 动态组件与v-once指令.html" />
+        <option value="$PROJECT_DIR$/4.组件/2.子组件的data.html" />
+        <option value="$PROJECT_DIR$/4.组件/15. 作用域插槽.html" />
+        <option value="$PROJECT_DIR$/4.组件/14. 具名插槽.html" />
+        <option value="$PROJECT_DIR$/4.组件/16. 动态组件与v-once指令----不使用动态组件的写法.html" />
+        <option value="$PROJECT_DIR$/4.组件/17. 动态组件.html" />
+        <option value="$PROJECT_DIR$/5. 动画效果/1. 过渡动画，渐隐渐现效果.html" />
+        <option value="$PROJECT_DIR$/5. 动画效果/1. 过渡动画，逐渐放大再缩小效果.html" />
+        <option value="$PROJECT_DIR$/5. 动画效果/2. 过渡动画，逐渐放大再缩小效果.html" />
+        <option value="$PROJECT_DIR$/Start.html" />
+        <option value="$PROJECT_DIR$/5. 动画效果/3. 过渡动画，自定义标签主键放大再缩小效果.html" />
+        <option value="$PROJECT_DIR$/5. 动画效果/4. 使用animate.css库.html" />
+      </list>
+    </option>
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="344" />
+    <option name="y" value="397" />
+    <option name="width" value="923" />
+    <option name="height" value="575" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <autoscrollFromSource ProjectPane="true" />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.jscs" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.jscs" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.jscs" value="" />
+    <property name="node.js.selected.package.standard" value="" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="jdk.selected.JAVA_MODULE" value="1.8" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\桌面\Desktop\程序员修炼之路\程序快速入门\入门小程序\Vue\veu测试\vuedemo\5. 动画效果" />
+      <recent name="D:\桌面\Desktop\veu测试\vuedemo\5.组件" />
+      <recent name="D:\桌面\Desktop\veu测试\vuedemo\Vue基础\计算属性的实现方式（优势computed大于监听大于方法）" />
+      <recent name="D:\桌面\Desktop\veu测试\vuedemo\Vue基础" />
+      <recent name="D:\桌面\Desktop\veu测试\vuedemo\todoList" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\桌面\Desktop\veu测试\vuedemo\Vue基础\计算属性的实现方式（优势computed大于监听大于方法）" />
+      <recent name="D:\桌面\Desktop\veu测试\vuedemo\helloworld" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.4. 使用animate.css库.html">
+    <configuration name="1. 过渡动画，渐隐渐现效果.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/vuedemo/5. 动画效果/1. 过渡动画，渐隐渐现效果.html">
+      <method v="2" />
+    </configuration>
+    <configuration name="2. 过渡动画，逐渐放大再缩小效果.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/vuedemo/5. 动画效果/2. 过渡动画，逐渐放大再缩小效果.html">
+      <method v="2" />
+    </configuration>
+    <configuration name="3. 过渡动画，自定义标签主键放大再缩小效果.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/vuedemo/5. 动画效果/3. 过渡动画，自定义标签主键放大再缩小效果.html">
+      <method v="2" />
+    </configuration>
+    <configuration name="4. 使用animate.css库.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/vuedemo/5. 动画效果/4. 使用animate.css库.html">
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="JavaScript Debug.1. 过渡动画，渐隐渐现效果.html" />
+      <item itemvalue="JavaScript Debug.2. 过渡动画，逐渐放大再缩小效果.html" />
+      <item itemvalue="JavaScript Debug.3. 过渡动画，自定义标签主键放大再缩小效果.html" />
+      <item itemvalue="JavaScript Debug.4. 使用animate.css库.html" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.4. 使用animate.css库.html" />
+        <item itemvalue="JavaScript Debug.3. 过渡动画，自定义标签主键放大再缩小效果.html" />
+        <item itemvalue="JavaScript Debug.2. 过渡动画，逐渐放大再缩小效果.html" />
+        <item itemvalue="JavaScript Debug.1. 过渡动画，渐隐渐现效果.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration" cleanupOnStartRun="true">
+    <configuration>C:\Users\hasee\AppData\Roaming\Subversion</configuration>
+    <supportedVersion>125</supportedVersion>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="647b5902-bd4c-4486-9cc2-c85b31c37a1f" name="Default Changelist" comment="" />
+      <created>1551450779000</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1551450779000</updated>
+      <workItem from="1551450781733" duration="7313000" />
+      <workItem from="1551510255099" duration="21993000" />
+      <workItem from="1555037340238" duration="9896000" />
+      <workItem from="1555129885296" duration="599000" />
+      <workItem from="1555209245814" duration="2165000" />
+      <workItem from="1555212734398" duration="2311000" />
+      <workItem from="1555215087710" duration="53000" />
+      <workItem from="1555215272914" duration="122000" />
+      <workItem from="1555215416099" duration="5293000" />
+      <workItem from="1555220746165" duration="93000" />
+      <workItem from="1555223382438" duration="457000" />
+      <workItem from="1555292751028" duration="96000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="50391000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18282403" />
+      <window_info id="Capture Tool" order="1" />
+      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info id="Image Layers" order="6" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32792208" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="right" id="Palette" order="0" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven Projects" order="3" weight="0.32995737" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="4" weight="0.25" />
+      <window_info anchor="right" id="Database" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Capture Analysis" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/2.todoList/1.todoList_容易版本.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="25" column="17" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue基础/计算属性的实现方式（优势computed大于监听大于方法）/vue.js" />
+    <entry file="file://$PROJECT_DIR$/3.Vue基础/1.计算属性的实现方式（优势computed大于监听大于方法）/计算属性.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="20" column="14" lean-forward="true" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue基础/demo.html" />
+    <entry file="file://$PROJECT_DIR$/3.Vue基础/1.计算属性的实现方式（优势computed大于监听大于方法）/使用监听实现计算属性.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="19" column="3" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/3.Vue基础/2.样式绑定/1. 使用class与对象的flag进行绑定数据.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="6" lean-forward="true" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/3.Vue基础/2.样式绑定/2. 使用三元运算符加绑定class属性绑定样式.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="26" column="51" selection-start-line="26" selection-start-column="51" selection-end-line="26" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/3.Vue基础/2.样式绑定/3. 使用style绑定样式.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="21" column="18" lean-forward="true" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/3.Vue基础/3.Vue中的条件渲染/1. Vue中的条件渲染.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="8" lean-forward="true" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/3.Vue基础/3.Vue中的条件渲染/2. 条件渲染多重判断.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="15" column="18" lean-forward="true" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/3.Vue基础/3.Vue中的条件渲染/3. 条件渲染中注意的细节.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="27" column="1" lean-forward="true" selection-start-line="26" selection-start-column="2" selection-end-line="27" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/4.组件/3. ref的简单使用.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="44" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/4.组件/4. ref对组件的操作（1）.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8">
+          <caret line="27" column="17" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/4.组件/6. 父组件对子组件传值.html" />
+    <entry file="file://$PROJECT_DIR$/4.组件/6. 父组件对子组件的传值.html" />
+    <entry file="file://$PROJECT_DIR$/4.组件/6. 父组件传值给子组件.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="29" column="21" lean-forward="true" selection-end-line="41" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/4.组件/7. 父子组件传值，emit带参数.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="43" column="9" lean-forward="true" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/4.组件/8. 父子组件传值时属性检验.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="624">
+          <caret line="26" column="68" selection-start-line="26" selection-start-column="68" selection-end-line="26" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1.helloworld/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="417">
+          <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2.todoList/2.todoList_复杂版本.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-39">
+          <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2.todoList/3.todoList_全局组件（父子传值）.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="44" column="20" selection-start-line="44" selection-start-column="20" selection-end-line="44" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2.todoList/4.todoList_局部改造（父子传值）.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2.todoList/5.todoList_父子组件传值（子传父）.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="417">
+          <caret line="70" column="13" lean-forward="true" selection-start-line="70" selection-start-column="13" selection-end-line="70" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/4.组件/11. 给组件绑定原生事件的快捷方式.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="27" column="7" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/3.Vue基础/1.计算属性的实现方式（优势computed大于监听大于方法）/使用方法实现计算属性.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="38" column="46" selection-start-line="38" selection-start-column="46" selection-end-line="38" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/4.组件/9. 父子组件非props特性.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8">
+          <caret line="12" column="2" selection-start-line="12" selection-start-column="2" selection-end-line="22" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/4.组件/10. 给组件绑定原生事件1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="12" column="7" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/4.组件/1. is传值妙用.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="609">
+          <caret line="29" column="16" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/4.组件/5. 订阅监听父子组件传值.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="672">
+          <caret line="49" selection-start-line="49" selection-end-line="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/4.组件/12. 非父子组件之间传值.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="15" column="10" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/4.组件/13. 在Vue中使用插槽.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-240">
+          <caret line="30" column="20" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/4.组件/2.子组件的data.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-152">
+          <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/3.Vue基础/Vue实例生命周期函数.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-88">
+          <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/3.Vue基础/v-for循环打印对象.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-304">
+          <caret line="38" column="71" selection-start-line="38" selection-start-column="71" selection-end-line="38" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/3.Vue基础/1.计算属性的实现方式（优势computed大于监听大于方法）/计算属性的get和set方法.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-40">
+          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/4.组件/15. 作用域插槽.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-168">
+          <caret line="20" column="15" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/5. 动画效果/vue.js" />
+    <entry file="file://$PROJECT_DIR$/5. 动画效果/1. 过渡动画，渐隐渐现效果.html" />
+    <entry file="file://$PROJECT_DIR$/5. 动画效果/2. 过渡动画，逐渐放大再缩小效果.html" />
+    <entry file="file://$PROJECT_DIR$/5. 动画效果/animate.min.css" />
+    <entry file="file://$PROJECT_DIR$/5. 动画效果/3. 过渡动画，自定义标签主键放大再缩小效果.html" />
+    <entry file="file://$PROJECT_DIR$/5. 动画效果/4. 使用animate.css库.html" />
+    <entry file="file://$PROJECT_DIR$/4.组件/16. 动态组件与v-once指令----不使用动态组件的写法.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/4.组件/17. 动态组件.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="960">
+          <caret line="40" column="9" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Start.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/4.组件/14. 具名插槽.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="624">
+          <caret line="26" column="7" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

@@ -1,0 +1,14 @@
+1. 首先pom.xml文件
+2. resources/application.xml  配置
+3. domain:    映射
+4. dao  :   定义接口
+5. test/
+	1. CUstomerDaoTest:  基本的增删查等操作..	
+	2. JpqlTest:	Jpql查询 		
+	3. sqlTest		sql的查询
+	4. method:	定义方法的查询
+
+6. 总结，
+	01 是原始JPA调用Hibernate的查询
+	02 是使用SpringDataJpa 对JPA的又一层封装的高级查询
+		里面有四种查询方法；

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="plugins/jQuery/jquery-2.2.3.min.js"></script>
+    <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="plugins/angularjs/angular.min.js"> </script>
+
+    <!--分页组件-->
+    <script src="plugins/angularjs/pagination.js"></script>
+    <link rel="stylesheet" href="plugins/angularjs/pagination.css">
+    <!--分页组件-->
+
+    <script src="js/base_pagination.js"></script>
+
+    <script src="js/base.js"></script>
+    <script type="text/javascript" src="js/service/service.js"> </script>
+    <script type="text/javascript" src="js/controller/controller.js"> </script>
+
+
+</head>
+<body ng-app="yuanchunyuyi" ng-controller="controller" ng-init="findBookById()">
+123456
+{{list}}</br>
+{{list.bookname}}
+<tr ng-repeat="entity in list">
+    <td>{{entity.bookname}}</td>
+    <td>{{entity.bookprice}}</td>
+</tr>
+
+<!--
+<center>
+    <table border="1" width="500px">
+        <tr ng-repeat=" entity in list" align="center">
+            <td>{{entity.id}}</td>
+            <td>{{entity.bookname}}</td>
+            <td>{{entity.createTime}}</td>
+            <td>{{entity.bookprice}}</td>
+        </tr>
+    </table>
+</center>
+&lt;!&ndash;分页控件&ndash;&gt;
+<tm-pagination conf="paginationConf"></tm-pagination>
+-->
+
+</body>
+</html>

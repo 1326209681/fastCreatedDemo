@@ -1,0 +1,40 @@
+# 普通配置，冒号后面要加空格
+name: zhangsan
+
+# 对象的配置
+person:
+  name: zhangsan
+  age: 18
+  addr: beijing
+
+# 行内对象配置[它跟上面的换行对象配置意义一样，我们平时用换行对象配置更多一点]
+# person: {name: zhangsan,age: 18,addr: beijing}
+
+# 端口的配置
+server:
+  port: 8080
+
+# 配置数据、集合（普通字符串）
+city:
+  - beijing
+  - tianjin
+  - chongqing
+  - shanghai
+
+# 配置数据、集合（存储对象）
+student:
+  - name: zhangsan
+    age: 18
+    addr: beijing
+  - name: lucy
+    age: 18
+    addr: shanghai
+
+# 行内配置对象
+# student: [{name: tom,age: 18,addr: beijing},{name: lucy,age: 18,addr: tianjin}]
+
+
+# map
+map:
+  key1: value1
+  key2: value2

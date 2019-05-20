@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.demo.mapper.DemoMapper">
+
+    <!-- 配置 查询结果的列名和实体类的属性名的对应关系 -->
+    <resultMap id="userMap" type="com.demo.entity.Teachplan">
+        <!-- 主键字段的对应 -->
+        <id property="id" column="id" jdbcType="VARCHAR"></id>
+        <!--非主键字段的对应-->
+        <result property="username" column="username" jdbcType="VARCHAR"></result>
+
+        <collection property="thingUsers" select="com.demo.mapper.ThingUser.findAll" column="id"></collection>
+    </resultMap>
+
+
+ <!--   <resultMap id="thing" type="com.demo.entity.ThingUser">
+        <id column="thing_id" property="thingId" javaType="String"></id>
+        <result column="thing" property="thing" javaType="String"></result>
+    </resultMap>-->
+
+
+
+    <select id="findAll" resultMap="userMap">
+        SELECT *
+        FROM user
+        order by user.id
+    </select>
+  <!--
+
+
+
+    -->
+
+    <!--<select id="findAll" resultMap="userMap">
+        SELECT t1.id, t1.username, t2.thing_id, t2.thing
+        FROM user t1  LEFT OUTER JOIN  thing_user t2
+        on  t1.id=t2.parent_id
+        limit #{pageNo,jdbcType=VARCHAR}, #{pageSize,jdbcType=VARCHAR}
+    </select>-->
+<!--
+    <select id="findAll" resultMap="userMap">
+select * from
+ thing_user
+WHERE parent_id
+in
+(select t1.id from
+  (select * from user limit  #{pageNo,jdbcType=VARCHAR}, #{pageSize,jdbcType=VARCHAR}) as t1
+  )
+    </select>-->
+
+</mapper>
+
+
+  <!--      /*select * FROM (select t3.id,t3.username,t2.thing_id,t2.thing FROM
+        (
+        SELECT t1.id, t1.username
+        FROM user t1  limit #{pageNo,jdbcType=VARCHAR}, #{pageSize,jdbcType=VARCHAR}) t3 LEFT OUTER JOIN  thing_user t2
+        on  t1.id=t2.parent_id*/-->

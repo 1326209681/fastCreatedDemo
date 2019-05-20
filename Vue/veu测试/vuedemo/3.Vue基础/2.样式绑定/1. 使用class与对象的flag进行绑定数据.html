@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>使用class与对象的flag进行绑定数据</title>
+    <script src="../vue.js"></script>
+    <style>
+        .activated{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <div @click="handleDivClick"
+         :class="{activated: isActivated}">
+        Hello World
+    </div>
+</div>
+<script>
+    /*
+    * 描述： 这里是通过：
+    *   1. div内设置触发事件，并且绑定class样式绑定activated值
+    *   2. 在<script>标签内接管#app区域，然后给isActivated给定一个值
+    *   3. 通过点击事件触发activated值取反，然后当值等于true的时候，会绑定class属性将小div区域内显示的值变为红色；
+    *
+    *
+    * */
+    var vm=new Vue({
+        el:"#app",
+        data:{
+            isActivated:false
+        },
+        methods:{
+            handleDivClick: function () {
+                this.isActivated=!this.isActivated;
+            }
+        }
+    })
+
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>11. 给组件绑定原生事件的快捷方式.html</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <child @click.native="handleClick" ></child>
+</div>
+<script>
+    /**
+     * 通过给@click 加一个'.native'后缀可以直接实现绑定原生事件的效果
+     */
+    Vue.component('child',{
+        template: '<div>Child</div>',
+    });
+    var vm=new Vue({
+        el: "#app",
+        methods: {
+            handleClick: function () {
+                alert('click')
+            }
+        }
+    })
+</script>
+</body>
+</html>

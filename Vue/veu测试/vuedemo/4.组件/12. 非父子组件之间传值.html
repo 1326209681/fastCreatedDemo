@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>12. 非父子组件之间传值.html</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <child content="Dell"></child>
+    <child content="Lee"></child>
+</div>
+<script>
+    /**
+     * 它其实就是简单的Bus/总线/发布订阅模式/观察者模式
+     * 原理：
+     *      1. 通过全局挂载bus,然后所有的组件都可以找到这个bus
+     *      2. 通过一个监听，一个发送 的发布订阅模式，进行两者之间的传值
+     *
+     * @type {Vue}
+     */
+
+    Vue.prototype.bus=new Vue();        //注册bus
+    Vue.component('child',{
+        data: function () {
+            return {
+                selfContent: this.content
+            }
+        },
+        props: {
+            content: String
+        },
+        template: '<div @click="handleClick">{{selfContent}}</div>',
+        methods: {
+            handleClick: function () {
+                this.bus.$emit('change',this.selfContent)
+            }
+        },
+        mounted: function () {
+            var this_=this;
+            this.bus.$on('change',function (msg) {
+                this_.selfContent=msg
+            })
+        }
+    });
+    var vm=new Vue({
+        el: "#app"
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+0:0:0:0:0:0:0:1 - - [10/Dec/2018:21:40:00 +0800] "GET / HTTP/1.1" 302 - http-bio-9003-exec-1 120
+0:0:0:0:0:0:0:1 - - [10/Dec/2018:21:40:26 +0800] "GET /login/cas?ticket=ST-1-m5QEgPlvi97pRzUpalFz-cas01.example.org HTTP/1.1" 302 - http-bio-9003-exec-4 223
+0:0:0:0:0:0:0:1 - - [10/Dec/2018:21:40:26 +0800] "GET / HTTP/1.1" 200 210 http-bio-9003-exec-5 6
+0:0:0:0:0:0:0:1 - - [10/Dec/2018:21:40:33 +0800] "GET /logout/cas HTTP/1.1" 302 - http-bio-9003-exec-6 3
+0:0:0:0:0:0:0:1 - - [10/Dec/2018:21:40:33 +0800] "GET /index2.html HTTP/1.1" 200 170 http-bio-9003-exec-8 5
+127.0.0.1 - - [10/Dec/2018:21:40:33 +0800] "POST /login/cas HTTP/1.1" 200 - http-bio-9003-exec-10 9

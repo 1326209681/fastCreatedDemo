@@ -1,0 +1,76 @@
+分为3层，一个是消费端，一个服务端，一个注册中心；
+
+
+## Feign  --远程调用
+1. 简介： 
+	* 英文翻译： 伪装    
+	* 为什么叫伪装？ Feign可以把Rest的请求进行隐藏，伪装成类似SpringMVC的Controller一样。可以不用再自己拼接url,拼接参数等操作，一切交给Feign去做；
+
+2. 使用：
+	1. 在消费端pom.xml中引入依赖：
+	2. 在启动类上添加注解：   @EnableFeignClients
+	3. 创建一个client的接口：
+		如：
+			@FeignClient("user-service")        //交代服务名称
+			public interface UserClient {
+			    @GetMapping("user/{id}")        //指明请求方式和地址以及参数
+			    User queryById(@PathVariable("id")Long id);     //自动注入id值
+			}
+	4. 直接@Autowired引入并直接调用queryId等方法即可；它会自动注入服务名，地址，端口，参数等信息；
+
+3. Feign根据了服务名就拿到了ip和端口，在集群中它是使用了负载均衡，熔断等机制，它都是支持的；
+4. 在application.yml配置中配置：
+	1. Ribbon[负载均衡]：
+		1. ribbon.ConnectionTimeOut: 500		[连接超时时长]
+		2. ribbon.ReadTimeOut: 2000				[读取超时时长]
+
+	2. hystrix[熔断]：
+		1. feign.hystrix.enabled: true       [开启熔断]    要在feign中使用熔断，必须要实现Feign的刚刚那个接口，且在原接口中的@FeignClient(value="服务名",fallback=实现类名称.class)
+
+
+5. 请求压缩[了解]
+	1. SpringCloudFeign 支持对请求和响应进行GZIP压缩，以减少通信过程中的性能损耗。通过下面的参数即可开启请求与响应的压缩功能：
+		* 在消费端的applicaiton.yml中配置：
+			feign: 
+				compression: 
+					request: 
+						enabled: true   # 开启请求压缩
+					response: 	
+						enabled: true   # 开启响应压缩
+
+	2. 同时，我们也可以对请求的数据类型，以及触发压缩的大小下限进行设置：		[比如数据的上传下载，可以进行压缩]
+		* 在消费端的applicaiton.yml中配置：
+			feign: 
+				compression: 
+					request: 
+						enabled: true    # 开启请求压缩
+						mime-types: text/html,application/xml,application/json			# 设置压缩的数据类型
+						min-request-size: 2048					# 设置触发压缩的大小下限
+
+	- 注意：   上面的数据类型、压缩大小下限均为默认值
+
+
+6. 日志级别[了解]
+	1. 介绍： 
+		* 前面讲过，通过logging.level.xx=debug来设置日志级别。然而这个对Fegin客户端而言不会产生效果。因为@FeignClient注解修改的客户端在被代理时，都会创建一个新的Fegin.Logger实例。
+		* 我们需要额外指定这个日志的级别才可以。
+
+	2. 配置：
+		1. 设置cn.itcast包下的日志级别都为debug
+			logging: 
+				level: 
+					cn.itcast: debug
+
+		2. 编写配置类，定义日志级别：
+			* @Configuration
+			* public class FeignConfig{
+			* @Bean
+			* Logger.Level.feignLoggerLevel(){
+			* return Logger.Level.Full;
+			* }
+			* }
+		3. 这里指定的Level级别是FULL,Feign支持4种级别：
+			1. Full
+			2. Basic
+			3. Headers
+			4. None

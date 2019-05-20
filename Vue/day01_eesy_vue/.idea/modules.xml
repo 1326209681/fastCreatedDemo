@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/day01_eesy_vue.iml" filepath="$PROJECT_DIR$/day01_eesy_vue.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../day01_vuejsDemo/day01_vuejsDemo.iml" filepath="$PROJECT_DIR$/../day01_vuejsDemo/day01_vuejsDemo.iml" />
+    </modules>
+  </component>
+</project>

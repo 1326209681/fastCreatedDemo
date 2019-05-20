@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TodoList</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <input type="text" v-model="value">
+    <button @click="handleBtnClick">提交</button>
+    <ul>
+        <li v-for="item in list">
+            {{item}}
+        </li>
+    </ul>
+</div>
+<script>
+    var app=new Vue({
+        el: '#app',
+        data:{
+            list: [],
+            value:''
+        },
+        methods:{
+            handleBtnClick:function () {
+                this.list.push(this.value);
+                this.value=''
+            }
+        }
+
+    })
+</script>
+
+</body>
+</html>

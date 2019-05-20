@@ -1,0 +1,37 @@
+package com.demo.controller;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+/**
+ * @program: Demo2
+ * @author: ’≈¿⁄
+ * @create: 2019/4/7-18:26
+ **/
+
+public class Demo2 {
+    
+    public static void main(String[] args) {
+        int pageNo=3;
+        int pageSize=5;
+        for (int i=0; i < pageSize; i++) {
+            System.out.println("hello"+pageNo++);
+        }
+
+
+        List list=new ArrayList();
+        Collections.addAll(list,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34);
+
+        int currentPageSize= (pageSize*pageNo)-pageSize;
+        try {
+            for (int i=0; i < pageSize; i++) {
+                System.out.println(list.get(currentPageSize++).toString());
+            }
+        } catch (Exception e) {
+        //    e.printStackTrace();
+        }
+    }
+    
+    
+}

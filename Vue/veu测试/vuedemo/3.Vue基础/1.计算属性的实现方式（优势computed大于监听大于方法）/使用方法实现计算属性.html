@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>使用方法实现计算属性</title>
+    <script src="../vue.js"></script>
+</head>
+<body>
+<!--
+这里示例是将两个名字结合防止冗余，就不需要重新定义一个data数据fullName了
+通过computed定义计算属性，就可以直接将值赋值给fullName
+同时，它自带缓存，当变量firstName,lastName的值没有发生改变的时候，它会直接使用缓存数据，不会再重新计算
+-->
+<!--
+方法也可以实现计算属性，
+插值表达式里面要调用方法；{{fullName}}
+注意： computed是有缓存机制，性能更高；
+同样的方法如果可以用计算属性，那么就用computed
+-->
+<div id="app">
+    {{fullName()}}
+</div>
+
+<script>
+    var vm=new Vue({
+        el:"#app",
+        data:{
+            firstName: "Hello",
+            lastName: "World"
+            //有了计算属性，就不需要定义一个新变量：fullName: "Hello World"
+        },
+        methods:{
+            fullName: function () {
+                return this.firstName+" "+this.lastName;
+            }
+        }
+       /* computed: {
+            fullName:function () {
+                return this.firstName+" "+this.lastName;
+            }
+        }*/
+
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>15. 作用域插槽.html</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <child>
+        <template slot-scope="props">
+            <p>{{props.item}}</p>
+        </template>
+    </child>
+</div>
+<script>
+/**
+* 作用域插槽：
+*   1. 首先在子组件的data区域内给list数组赋值；
+*   2. 然后再子组件的标签内遍历，这样就会进行遍历打印；
+*   3. 而遍历的标签是slot 标签，说明这是作用域插槽，则遍历的方式要看父组件
+*   4. 父组件的template中定义了slot-scope="props" 通过这个方式将 p标签的打印形式传给了子组件，而子组件的slot则进行同时执行；
+*   4. 既遍历打印子组件中的值，又以父组件中定义的格式来进行，这就是作用域插槽；
+*/
+    Vue.component('child',{
+        data: function () {
+            return {
+                list: [1,2,3,4]
+            }
+        },
+        template: '<div> <url> <slot v-for="item of list" :item=item ></slot></ul></div>'
+    });
+    var vm=new Vue({
+        el: '#app'
+
+    })
+</script>
+</body>
+</html>
+
+

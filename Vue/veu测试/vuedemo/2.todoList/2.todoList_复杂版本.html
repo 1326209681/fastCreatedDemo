@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TodoList</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-model="value">
+        <button @click="handleBtnClick">提交</button>
+        <h2>待办事项</h2>
+        <ul>
+            <li  v-for="(item,key) in list" v-if="!item.checked">
+               <input type="checkbox" v-model="item.checked"> {{item.value2}}---<button @click="removeData(key)">删除</button>
+            </li>
+        </ul>
+        <hr>
+        <h2>已完成事项</h2>
+        <ul>
+            <li  v-for="(item,key) in list" v-if="item.checked">
+                <input type="checkbox" v-model="item.checked">{{item.value2}}---<button @click="removeData(key)">删除</button>
+            </li>
+        </ul>
+       {{item}}
+    </div>
+<script>
+    var app=new Vue({
+        el: '#app',
+        data:{
+            list: [],
+            value:'',
+        },
+        methods:{
+            handleBtnClick () {
+                this.list.push({
+                    checked: false,
+                    value2: this.value
+                });
+                this.value=''
+            },
+            removeData(key){
+                this.list.splice(key,1);
+            }
+        }
+
+    })
+</script>
+
+</body>
+</html>

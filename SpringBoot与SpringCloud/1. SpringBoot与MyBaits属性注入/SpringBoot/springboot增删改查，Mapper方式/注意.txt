@@ -1,0 +1,2 @@
+1. 其中依赖问题未解决，就是导入Mapper的依赖，可以使用Mapper其他版本，如2.0.4
+2. 这里面使用了通用Mapper进行增删改查操作，联合了Spring,SpringMVC,MyBatis；

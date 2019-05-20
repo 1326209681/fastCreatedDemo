@@ -1,0 +1,4 @@
+注意：
+	1. 使用此demo需要安装有activeMQ软件的服务器
+	2. 里面SpringBoot配合了ActiveMQ，有队列和订阅模式两种类型
+	3. 导入了阿里大于短信的依赖包和大于短信的demo；

@@ -1,0 +1,38 @@
+server:
+  port: 10010
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10086/eureka
+spring:
+  application:
+    name: gateway
+zuul:
+  routes:
+    user-service:
+      path: /user/**
+      serviceId: user-service
+      strip-prefix: false    # 用false否，则不会去除匹配路径
+  ignored-services:     # 这个配置是忽略服务，下面的列表集合表示被忽略的服务
+    - consumer-server
+  prefix: /api        # 全局前缀，在发送请求的时候必须先加上这个前缀；
+#    hehe:       # 这个id叫什么都可以，也可以直接不写
+#      path: /user-server/**
+#     url: http://127.0.0.1:8081   在加入eureka注册中心之后，地址就不应该指定ip和端口了
+#     应该直接写服务地址，这样可以让eureka 注册中心通过负载均衡算法给一个具体的ip和端口
+#      serviceId: user-service
+
+# zool配置好了之后，发送请求不直接发送给consumer项目的controller
+# 而是直接用zuul的来： localhost:10010/user-server/user/1
+# 端口是zuul的port，user-server请求服务名，user/1为地址加参数
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 6000
+ribbon:
+  ConnectionTimeout: 500
+  ReadTimeOut: 4000

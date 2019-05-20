@@ -1,0 +1,8 @@
+1. 这里的环境是springboot 以及maven的
+2. 里面的代码示例包括一对一消费者生产者，以及
+	1. work queues 工作空间
+	2. publish/subscribe	订阅模式
+	3. routing 路由模式
+	4. topic 统配符模式
+	5. header 模式
+	6. RPC模式

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>子组件的data</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <table>
+        <tbody>
+            <tr is="row"></tr>
+            <tr is="row"></tr>
+            <tr is="row"></tr>
+        </tbody>
+    </table>
+</div>
+<script>
+    /*
+    * 在子组件中，使用data不是一个对象了，而是一个函数
+    *   1.使用function定义data
+    *   2. 使用return 返回
+    * > 使用函数，能让每个子组件的数据独立，不被其他数据所影响
+    *
+    * */
+    Vue.component('row', {
+        data:function(){
+            return{
+                content:'This is content'
+            }
+        },
+        template: '<tr><td>{{content}}</td></tr></td>'
+    });
+    var vm = new Vue({
+        el: "#app"
+    })
+</script>
+</body>
+</html>

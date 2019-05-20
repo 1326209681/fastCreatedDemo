@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>快速开始</title>
+    <script src="vue.js"></script>
+    <style>
+        .fade-enter,
+        .fade-leave-to{
+            opacity: 0;
+        }
+        .fade-enter-active,     /* 显示 */
+        .fade-leave-active {    /* 离开 */
+            transition: opacity 3s;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <transition name="fade">
+        <div v-if="show"> hello,world</div>
+    </transition>
+    <button @click="handleClick">切换</button>
+
+</div>
+<script>
+    /**
+     * 渐隐渐现效果原理：
+     *  1. 首先div标签外必须要加transition标签包裹才能使用动画效果
+     *  2. 可以单独命名使用：
+     *      name= fade
+     *      这里命名了这个div动画效果，则进行css样式的时候，都是.fade开头
+     *      即：
+     *          <style>
+     *               .fade-enter,
+     *               .fade-leave-to.....
+     *          </style>
+     *  3. 可以全局使用：
+     *      则不需要给name  属性值
+     *      即：
+     *          <transition>
+     *                 <div v-if="show">hello,world</div>
+     *          <transition>
+     *     在属性中则这样调用：
+     *          <style>
+     *              .v-enter,
+     *              .v-leave-to
+     *          <.style>
+     *     总结来说，就是如果命名了则以.name...开头
+     *     如果没有命名则以：    .v....开头
+     *
+     *  4. 注意：
+     *      也可以将动态组件包裹效果，可以直接将组件包裹再这样既可；
+     * @type {Vue}
+     */
+    var vm=new Vue({
+        el: '#app',
+        data: {
+            show: true
+        },
+        methods: {
+            handleClick: function () {
+                this.show=!this.show;
+            }
+        }
+    })
+
+</script>
+</body>
+</html>

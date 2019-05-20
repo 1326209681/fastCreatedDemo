@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>条件渲染中注意的细节</title>
+    <script src="../vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <div v-if="show">
+        用户名:<input key="username"/>
+    </div>
+    <div v-else>
+        邮箱名：<input key="password"/>
+    </div>
+</div>
+<script>
+    /*
+    * 在多个input框的时候，如果没有给key值，系统只加载一个input框，另外一个被加载的时候，框里面的值依然存在；
+    *       //在浏览器调试中可以测试： vm.show=true      两个框框如果没有key，则框里面的值也会被带过去！
+    * 所以我们必须加一个key值表明input框中的数据是不一样的，且不能被复用；
+    * 在input框中一定要加Key值！
+    * */
+    var vm=new Vue({
+        el:"#app",
+        data:{
+            show:false
+        }
+    })
+</script>
+</body>
+</html>

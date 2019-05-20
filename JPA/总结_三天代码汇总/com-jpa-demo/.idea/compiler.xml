@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="com-jpa-demo" />
+        <module name="day01_jpa1" />
+        <module name="jpa-day1" />
+        <module name="jpa-day2" />
+        <module name="jpa-day3-many-to-many" />
+        <module name="jpa-day3-one-to-many" />
+        <module name="jpa-day3-spec" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="com-jpa-demo" target="1.5" />
+      <module name="day01_jpa1" target="1.5" />
+      <module name="jpa-day1" target="1.5" />
+      <module name="jpa-day2" target="1.5" />
+      <module name="jpa-day3-many-to-many" target="1.5" />
+      <module name="jpa-day3-one-to-many" target="1.5" />
+      <module name="jpa-day3-spec" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

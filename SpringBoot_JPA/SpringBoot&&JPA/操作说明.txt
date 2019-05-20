@@ -1,0 +1,6 @@
+1. 需要备Redis软件，开启Server，配置ip地址和端口号
+2. 操作点：
+	1. 热部署
+	2. 基础语法
+	3. 配置数据
+	4. 整合Mybatis,Junit,Jpa,Redis...

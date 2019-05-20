@@ -1,0 +1,26 @@
+1. 在消费端的pom.xml引入依赖： 
+		  <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
+        </dependency>
+
+	2. 在启动类中的引用restTemplate方法上加注解：@LoadBalanced  ,在web/Controller.java中直接使用：String url="http://user-service/user/"+id;     会自动拦截请求，且将分配service-name所负载均衡所匹配的ip端口调用方法；
+	3. 或者在web/controller.java中直接使用：
+		
+        //使用Ribbon的负载均衡算法，它自动帮我们取出一个实例
+        //算法有随机，轮询，hash等方式，默认采用随机
+        //ServiceInstance instance=client.choose("user-service");
+ 	    //String url="http://"+instance.getHost()+":"+instance.getPort()+"/user/"+id;
+
+	4. 可在application.yml中配置负载均衡算法：
+		user-service.ribbon.NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+
+11. 负载均衡策略解读：
+			策略名													策略描述	
+		BestAvailableRule									选择一个最小的并发请求server
+		AvailabilityFilteringRule							使用一个AvailabilityPredicate来包含过滤server的逻辑，其实就就是检查status里记录的各个server的运行状态
+		WeightedResponseTimeRule							根据响应时间分配一个weight，响应时间越长，weight越小，被选中的可能性越低。
+		RetryRule											对选定的负载均衡策略机上重试机制。
+		RoundRobinRule										roundRobin方式轮询选择server
+		RandomRule											随机选择一个server
+		ZoneAvoidanceRule									复合判断server所在区域的性能和server的可用性选择server

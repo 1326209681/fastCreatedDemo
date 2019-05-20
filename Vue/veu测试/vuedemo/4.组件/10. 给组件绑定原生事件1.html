@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>10. 给组件绑定原生事件1.html</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <child @click="handleClick"></child>
+</div>
+<script>
+    /**
+     * 这里的绑定原生事件    这个较为繁琐，绑定原生事件有另外一个方法，在 11 教程中指出
+     *  1. 当父组件将单击事件给予子组件的标签上的时候，通过@click 的通道传给子组件
+     *  2. 当子组件接收到@click的时候，则将请求给予handleChildClick方法，该方法再传给@Click单击事件，然后再响应父组件的请求
+     *
+     */
+    Vue.component('child',{
+        template: '<div @click="handleChildClick">Child</div>',
+        methods: {
+            handleChildClick: function () {
+                this.$emit('click')
+            }
+        }
+    });
+    var vm=new Vue({
+        el: '#app',
+        methods: {
+            handleClick: function () {
+                alert('click')
+            }
+        }
+    })
+</script>
+</body>
+</html>
+
+

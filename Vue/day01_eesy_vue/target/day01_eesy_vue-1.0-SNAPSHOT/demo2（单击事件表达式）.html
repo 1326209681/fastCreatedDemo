@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>v-on:click</title>
+		<script src="js/vuejs-2.5.16.js"></script>
+	</head>
+	<!--单击事件表达式-->
+	<body>
+		<div id="app">
+			{{message}}  
+			<button v-on:click="fun1('helloword')">点我揭晓答案</button>
+		</div>
+	</body>
+	<script>
+		//view model
+		new Vue({
+			el:"#app",
+			data:{
+                message:"佩奇是什么？"
+		},
+			methods:{
+			    fun1:function (msg) {
+			        alert("马上揭晓哦!");
+					this.message=msg;
+
+                }
+			}
+
+		});
+		
+	</script>
+</html> 

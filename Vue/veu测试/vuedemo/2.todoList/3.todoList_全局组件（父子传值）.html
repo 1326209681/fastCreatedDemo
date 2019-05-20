@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TodoList</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+<div id="root">
+    <div>
+        <input type="text" v-model="todoValue"/>
+        <button @click="handleBtnClick">提交</button>
+    </div>
+
+    <ul>
+      <!--  <li v-for="item in list">
+            {{item}}
+        </li>-->
+
+        <!--组件名字是大写，这里标签可以小写，小写item前面加一个横杠隔开-->
+      <todo-item  v-bind:content="item" v-for="item in list">
+
+      </todo-item>
+
+    </ul>
+</div>
+
+<script>
+    //创建全局组件的方法： Vue.component("组件名字（大写）",{
+    // template:"模板"
+    // }})
+
+    //创建全局组件
+    Vue.component("TodoItem",{
+        //当接收数据的时候，需要用props进行传入
+        props:['content'],
+     /*   template:"<li>"+this.content+"</li>"   这样写是错误的，在模板里面我们必须使用插值表达式*/
+        template:"<li>{{content}}</li>",
+    });
+
+    var app =new Vue({
+        el:'#root',
+        data:{
+            todoValue:'',
+            list:[],
+        },
+        methods:{
+            handleBtnClick:function () {
+                this.list.push(this.todoValue);
+                    this.todoValue=''
+            }
+        }
+    })
+</script>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>17. 动态组件.html</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <component :is="type"></component>
+    <button @click="changeHandleBtn">点我切换组件</button>
+</div>
+<script>
+    /**
+     * 原理：
+     *  1. 首先，这里的标签直接就是component 然后:is绑定属性，
+     *  2. 当属性为组件1的名字时候，则显示组件1 ，当属性为组件2的时候，则显示组件2
+     *  3. 然后通过父组件中的button按钮作为点击切换，当值发生改变的时候，那么这个子组件显示则也会跟着变化，这就是动态组件
+     *
+     *  ---------注意----------
+     *  *** 在每次切换的过程中，两个组件的div内容会被反复销毁，反复重建，这样会消耗性能，我们可以使用 ： v-once指令，它是将要切换的内容放入内存中，下次切换的时候，就不会重新创建
+     *  *** 而是直接从内存中取出，这样既减少了反复创建和销毁的操作，节省了计算机性能，同时也让加载的速度更快了；
+     */
+    Vue.component('child1',{
+        template: '<div>hello,world</div>'
+    });
+    Vue.component('child2',{
+        template: '<div>hello,Mr Zhan</p>'
+    });
+
+    /**
+     * 改造如下；
+     * Vue.component('child1',{
+     *  template: '<div> hello,world</div>'
+     * });
+     * Vue.component:('child2',{
+     * template: '<div> hello,Mr Zhan</p>'
+     * })
+     */
+
+    var vm=new Vue({
+        el: '#app',
+        data:{
+            type: 'child1'
+        },
+        methods: {
+            changeHandleBtn: function () {
+                this.type=this.type=='child1'?'child2':'child1'
+            }
+        }
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo</title>
+</head>
+<body onload='init()'>
+
+<img src="老师_1.jpg">
+
+<img id="img" src="老师_1.jpg" >
+
+<script>
+    function init(){
+        var num =Math.floor(Math.random()*3+1);
+        var img =document.getElementById("img");
+        img.src="老师_"+num+".jpg";
+    }
+</script>
+</body>
+<html>

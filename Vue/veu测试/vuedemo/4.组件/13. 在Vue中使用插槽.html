@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>快速开始</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <child>
+        <h1>Dell</h1>
+    </child>
+</div>
+<script>
+    /**
+     * 当父组件直接在子组件的标签内中添加内容的时候：
+     *          <child>
+     *              <h1>Dell</h1>
+     *          </child>
+     *
+     * 子组件中定义： <slot></slot>   进行显示
+     * 如果<slot></slot>中定义了内容的话，当父组件的<h1></h1>这个标签如果没有定义数据，则会显示slot标签内的数据
+     * 它是作为一个默认值存在的
+     * *** 注意***
+     * ----- 当<child>标签内的插槽标签有很多个的时候，一个<slot>标签则会全部显示出来；
+     * ----- 如果只想显示插槽中的其中一个标签的内容，可以使用   具名插槽    -- 它是可以显示具体的一个标签，同时它里面也是放默认值的，如果父组件中定义的插槽标签没有值的话，则会显示默认值
+      */
+    Vue.component('child',{
+        template: '<div><p>Hello</p><slot>默认值</slot></div>'
+    })
+    var vm=new Vue({
+        el: '#app'
+    })
+</script>
+</body>
+</html>

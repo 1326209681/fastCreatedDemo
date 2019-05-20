@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <input>+<input>=<button @click="demo">点击计算</button>{{data}}
+
+</div>
+
+<script>
+    var vm=new Vue({
+        el:"#app",
+        data:{
+            data: ""
+        },
+        methods:{
+            demo:function () {
+                alert("点击确定揭晓答案！");
+                this.data='  '+"小豌豆"
+            }
+        }
+
+    })
+</script>
+</body>
+</html>

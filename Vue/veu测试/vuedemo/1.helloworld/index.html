@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HelloWorld</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+<div id="app">
+{{content}}
+</div>
+
+<script>
+    /*
+    原生js实现方式
+    var dom= document.getElementById('app');
+    dom.innerHTML='1.helloworld';*/
+    /*
+    * Vue  实现方式
+    * 它接管了app下面的实例（el）
+    * 所以表达式只在被接管的区域内有效
+    * */
+    var app=new Vue({
+        el:'#app',
+        data: {
+            content: 'HelloWorld!'
+        },
+        //两秒之后改变数据内容
+    });
+    setTimeout(function () {
+        app.$data.content='It`s not HelloWorld!'
+    },2000)
+</script>
+</body>
+</html>

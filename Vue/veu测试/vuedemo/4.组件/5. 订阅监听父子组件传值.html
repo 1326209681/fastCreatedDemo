@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>订阅监听父子组件传值</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <counter @change="handleChange" ref="one"></counter>
+    <counter @change="handleChange" ref="two"></counter>
+    <div >{{total}}</div>
+</div>
+<script>
+    Vue.component('counter',{
+        template:'<div @click="handleClick">{{number}}</div>',
+        data:function () {
+            return{
+                number:0
+            }
+        },
+        methods:{
+            handleClick:function () {
+                this.number++;
+                //发布订阅
+                this.$emit('change')
+            }
+        }
+    });
+    var vm=new Vue({
+        el:"#app",
+        data:{
+            total:0
+        },
+        methods:{
+            handleChange:function () {
+                this.total=this.$refs.one.number+this.$refs.two.number
+            }
+        }
+    })
+</script>
+</body>
+</html>
+<!--
+这里面：
+    1. 使用ref给dom命名，以及设定初始number
+    2. 当执行点击操作的时候触发number++ ,并触发发布订阅
+    3. 因为在标签上设置了@change，则可以监听数据发生了变化，则触发handleChange方法
+    4. 此方法将父组件中定义的total数据发生变化，以指定ref的one,two两个变量dom 求和的值
+
+ > 这样就完成了子组件中两个数据相加，然后父组件监听到消息并进行求和显示！
+ > 这里定义的是全局组件，所以不需要挂载，当定义局部组建的时候，是需要挂载的！
+
+-->
+
+
+

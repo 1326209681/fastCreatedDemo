@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ref的简单使用</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <!--
+    概述： ref是绑定dom，可以对dom直接进行操作。
+    this.$refs则表示找到所有的dom，然后.hello则指定此dom,然后调用alert方法打印InnerHtml的内容；
+    注意： 当ref绑定的是一个组件的时候，它就可以直接操作这个组件的所有属性和方法
+
+    -->
+   <div ref="hello" @click="handleClick">Hello World</div>
+</div>
+<script>
+    var vm =new Vue({
+        el:'#app',
+        methods:{
+            handleClick:function () {
+                alert(this.$refs.hello.innerHTML)
+
+            }
+        }
+
+    })
+</script>
+</body>
+</html>
